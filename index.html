@@ -1,1 +1,148 @@
-<meta http-equiv="refresh" content="0; url=https://ezstat.ru/cloudflare-check" />
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Tommy Parky 2024</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <meta property="og:title" content="Tommy Parky Hub">
+  <meta property="og:description" content="TOMMY PARKY IS BACK IN BUSINESS, PARTNER. TOGETHER, WE CAN MAKE A DIFFERENCE. JOIN THY UTUBETROLLPOLICE AND HELP US FIGHT AGAINST THOSE PESKY, DISGUSTING TROLLS WHO HAVE BEEN PESTS TO THE INTERNET FOR YEARS NOW. LETZ DO THIS GUYZ!">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.example.com/">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:thumbnail:src" content="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/af307d7f-9b59-4080-97b0-418775f0a815/dgd1lww-6680181d-df55-4d30-b8cd-e79c78f7671f.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FmMzA3ZDdmLTliNTktNDA4MC05N2IwLTQxODc3NWYwYTgxNVwvZGdkMWx3dy02NjgwMTgxZC1kZjU1LTRkMzAtYjhjZC1lNzljNzhmNzY3MWYuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.X5-tlBRQc0dKwzy1CJhNbqwETAJ8T_mEhHu1Gm-buEQ">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+<body>
+  <audio src="bg.mp3" autoplay="autoplay" loop="loop"></audio>
+  <div class="cover">
+    <div class="menuBtnGuard">
+    <i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;" id="menuButton1" onclick="topbarShow()"></i>
+    <i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;" id="menuButton2" onclick="topbarHide()"></i>
+    </div>
+    <div id="topbar">
+    </div>
+    <div class="centerPanel" id="changeHeight">
+      <img src="logo.png" class="centerLogo" width="65%">
+      <button id="server1" class="panelBtn" onclick="dc1()">Discord 1</button> <br> <br>
+      <button id="server2" class="panelBtn" onclick="dc2()">Discord 2</button> <br> <br>
+      <button id="templates" class="panelBtn" onclick="templates()">Templates</button> <br> <br>
+      <button id="autoping" class="panelBtn" onclick="autoping()">Autoping</button> <br> <br>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <!--jquery for animations-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!--fontawesome for icons-->
+  <script src="https://kit.fontawesome.com/e4e18b8fc0.js" crossorigin="anonymous"></script>
+  <!--the css-->
+  <style>
+    @media screen and (max-width: 799px) {
+        body {
+          background-color: #212121;
+        }
+    }
+    
+    @media screen and (min-width: 800px) {
+        body {
+          background-image: url('BG.png');
+        }
+    }
+    
+    button {
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #404040;
+    }
+    
+    br {
+      content: "";
+      margin: 2em;
+      display: block;
+      font-size: 24%;
+    }
+
+    .centerPanel {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #1c1c1c;
+      border: 5px solid #353535;
+      border-radius: 16px;
+      width: 20%;
+      height: 45%;
+      text-align: center;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .centerPanel {
+        width: 60%;
+      }
+    }
+
+    @media only screen and (min-width: 600px) {
+      .centerPanel {
+        width: 40%;
+        height: 55%;
+      }
+    }
+
+    .panelBtn {
+      margin: auto;
+      background-color: #353535;
+      border-radius: 16px;
+      width: 60%;
+      height: 50px;
+      border: none;
+      color: white;
+    }
+
+    #topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #1c1c1c;
+      border-bottom: 5px solid #353535;
+      display: none;
+      z-index: -99999;
+    }
+
+    #menuButton1 {
+      position: absolute;
+      top: 30px;
+      right: 20px;
+      cursor: pointer;
+      z-index: 99999;
+      display: block;
+    }
+
+    #menuButton2 {
+      position: absolute;
+      top: 30px;
+      right: 20px;
+      cursor: pointer;
+      z-index: 99999;
+      display: none;
+    }
+
+    .menuBtnGuard {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 70px;
+      height: 60px;
+      border-left: 3px solid #353535;
+      border-bottom: 3px solid #353535;
+      background-color: #1c1c1c;
+    }
+  </style>
+</body>
+</html>

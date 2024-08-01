@@ -1,0 +1,44 @@
+body {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.officers {
+  position: fixed;
+  top: calc(50% + 175px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+}
+
+.heads {
+  position: fixed;
+  top: calc(50% - 140px + 175px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 217px;
+}
+
+.hats {
+  position: fixed;
+  top: calc(50% - 190px + 175px);
+  left: calc(50% + 2px);
+  transform: translate(-50%, -50%);
+  width: 340px;
+  z-index: 9999999;
+}
+
+.badges {
+  position: fixed;
+  top: calc(50% + 175px);
+  left: calc(50% - 110px);
+  transform: translate(-50%, -50%);
+  width: 50px;
+}
+
+.controlBtn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}

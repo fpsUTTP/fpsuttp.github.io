@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>RIZZ</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+</head>
+<body>
+
+  <!--WELCOME TO THY CLUB NOW-->
+
+  <audio src="bg.mp3" autoplay="autoplay" loop="loop"></audio>
+
+  <!--LOGO-->
+
+  <img src="https://media.discordapp.net/attachments/1236605479753617428/1238562095067566231/UTTP_OFFICER_CREATOR_LOGO.png?ex=663fbc56&is=663e6ad6&hm=affc1e80a763fa8f019ba09ab3d00a30828d9f5301f30accd75c7175c263ef26&=&format=webp&quality=lossless" width="400"> <br>
+  
+  <!--IMAGES-->
+  
+  <img src="main.png" class="officers" id="mainOfficer" style="display: block;">
+  <img src="lime.png" class="officers" id="limeOfficer" style="display: none;">
+  <img src="red.png" class="officers" id="redOfficer" style="display: none;">
+  <img src="normalHead.png" class="heads" id="normalHead" style="display: none;">
+  <img src="fpshead.png" class="heads" id="fpsHead" style="display: none;">
+  <img src="mainHat.png" class="hats" id="mainHat" style="display: none;">
+  <img src="cyanHat.png" class="hats" id="cyanHat" style="display: none;">
+  <img src="redHat.png" class="hats" id="redHat" style="display: none;">
+  <img src="naziBadge1.png" class="badges" id="naziBadge1" style="display: none;">
+  <img src="naziBadge2.png" class="badges" id="naziBadge2" style="display: none;">
+  
+  <!--BUTTONS-->
+
+  <button onClick="showControls()" id="showBtn" class="controlBtn">Show Controls</button>
+  <button onClick="hideControls()" id="hideBtn" class="controlBtn" style="display: none;">Hide Controls</button>
+  
+  <br> <br>
+  <div id="btns" style="display: none;">
+  <button onclick="blue()">Normal Uniform</button>
+  <button onclick="lime()">Lime Uniform</button>
+  <button onclick="red()">Red Uniform</button>
+  <br> <br>
+  <button onclick="naziBadge1()">Nazi Badge 1</button>
+  <button onclick="naziBadge2()">Nazi Badge 2</button>
+  <br> <br>
+  <button onclick="normalHead()">Normal Head</button>
+  <button onclick="fpsHead()">FPS Head</button>
+  <br> <br>
+  <button onclick="mainHat()">Normal Hat</button>
+  <button onclick="cyanHat()">Cyan Hat</button>
+  <button onclick="redHat()">Red Hat</button>
+  </div>
+
+  <!--JAVASCRIPT-->
+  
+  <script src="script.js"></script>
+  
+</body>
+</html>

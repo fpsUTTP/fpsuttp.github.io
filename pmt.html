@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Propaganda Maker</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+</head>
+<body>
+
+  <button onclick="showControls()" id="showBtn">Show Controls</button>
+  <button onclick="hideControls()" id="hideBtn">Hide Controls</button>
+
+  <div id="controls">
+
+    <h2>Background Images:</h2>
+    <button onclick="bg1()"><img src="backgrounds/gaza1.png" width="200px"></button> <br>
+    <button onclick="bg2()"><img src="backgrounds/auschwitz.png" width="200px"></button> <br> <br>
+    <label for="bgimg">Custom Background:</label>
+    <input id='file' type='file' name="bgimg">
+
+    <h2>Officers:</h2>
+
+    <h3>Upload Officer 1:</h3>
+    <input type="file" name="filePhoto" value="" id="filePhoto" class="required borrowerImageFile" data-errormsg="PhotoUploadErrorMsg">
+    <br/><br/>
+    <div class="slidecontainer">
+      <label for="1">Image Size:</label>
+      <input type="range" min="1" max="20" value="1" class="slider" id="Slider" name="1">
+    </div>
+
+    <h3>Upload Officer 2:</h3>
+    <input type="file" name="filePhoto2" value="" id="filePhoto2" class="required borrowerImageFile" data-errormsg="PhotoUploadErrorMsg">
+    <br/><br/>
+    <div class="slidecontainer2">
+      <label for="2">Image Size:</label>
+      <input type="range" min="1" max="20" value="1" class="slider2" id="Slider2" name="2">
+    </div>
+
+    <h3>Upload Officer 3:</h3>
+    <input type="file" name="filePhoto3" value="" id="filePhoto3" class="required borrowerImageFile" data-errormsg="PhotoUploadErrorMsg">
+    <br/><br/>
+    <div class="slidecontainer3">
+      <label for="3">Image Size:</label>
+      <input type="range" min="1" max="20" value="1" class="slider3" id="Slider3" name="3">
+    </div> <br>
+
+    <button onclick="showGallery()" id="showGalleryBtn">Show Officer Gallery</button>
+    <button onclick="hideGallery()" id="hideGalleryBtn">Hide Officer Gallery</button> <br>
+
+    <h2>Adjustments</h2>
+    <label for="brightnessSlider">Officer Brightness</label>
+    <input type="range" min="0" max="200" value="100" class="brightnessSlider" id="brightnessSlider" name="brightnessSlider">
+
+  </div>
+
+  <img id="uploadedOfficer" width="10%">
+  <img id="uploadedOfficer2" width="10%">
+  <img id="uploadedOfficer3" width="10%">
+
+  <div id="gallery">
+    <div class="game-board">
+      <img src="gallery/officers/ganson.png" class="box" width="200px;" id="galleryOfficer1" ondblclick="hide1()">
+      <img src="gallery/officers/irin.png" class="box" width="200px;" id="galleryOfficer2" ondblclick="hide2()">
+      <img src="gallery/officers/zenesant.png" class="box" width="200px;" id="galleryOfficer3" ondblclick="hide3()">
+      <img src="gallery/officers/spong.png" class="box" width="200px;" id="galleryOfficer4" ondblclick="hide4()">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <p id="niggerText" style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);">Double click on an officer to remove it from your gallery. You can drag around
+    officers to put them in your art.</p>
+  </div>
+
+  <script src="script.js"></script>
+
+  <style>
+    body {
+      background-size: 100%;
+      font-family: 'Segoe UI';
+      color: white;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    .game-board {
+      display: grid;
+      grid-template-rows: 200px 200px 200px;
+      grid-template-columns: 200px 200px 200px;
+    }
+
+    .box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #AAA;
+      width: 200px;
+      height: 200px;
+      resize: both;
+    }
+
+    #showBtn {
+      display: block;
+    }
+
+    #hideBtn {
+      display: none;
+    }
+
+    #controls {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      display: none;
+      background-color: #383838;
+      width: 400px;
+      padding: 20px;
+      border-radius: 0px;
+      z-index: -1;
+    }
+
+    #showBtn {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      width: fit-content;
+      height: fit-content;
+      z-index: 99999;
+    }
+
+    #hideBtn {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      width: fit-content;
+      height: fit-content;
+      z-index: 99999;
+    }
+
+    #gallery {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: calc(50% + 300px);
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background-color: #383838;
+    }
+
+    #showGalleryBtn {
+      display: block;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    #hideGalleryBtn {
+      display: none;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+  <audio src="bg.mp3" autoplay="autoplay" loop="loop"></audio>
+</body>
+</html>
